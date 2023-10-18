@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style_header.css" />
+    <link rel="stylesheet" href="style_footer.css" />
+    <link rel="stylesheet" href="style_general.css" />
+    <link rel="stylesheet" href="style_register.css" />
+    <title>Register for an Account</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="header-title-container">
+          <a class="header-logo-link" href="./index.html"><img class="header-logo" src="./images/photo-1618641662184-bafefb91a542.avif" alt="male lion face"></i></a>
+          <h1 class="header-title">LionPlanet</h1>
+        </div>
+
+        <ul class="header-menu">
+          <li><a href="./index.html">Homepage</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./tour.html">Tour</a></li>
+          <li><a href="./events.html">Events</a></li>
+        </ul>
+
+        <div class="nav-menu-container">
+          <nav class="nav-menu">
+            <button class="menu-main" type="button">
+              <i class="gg-menu-boxed"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="menu-item">
+                <a class="menu-link" href="./index.html">Home</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="./about.html">About Us</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="./register.html">Register</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="grid-container">
+        <form action="/register" method="POST">
+          <div class="field-title">
+            <h1>Sign Up</h1>
+          </div>
+          <div class="field-container">
+            <label class="indication">
+              <em class="asterisk">*</em> Indicates a required field
+            </label>
+          </div>
+          <div class="field-container">
+            <label for="first-name"><em class="asterisk">*</em> First name</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label for="last-name"><em class="asterisk">*</em> Last name</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Last name"
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label for="email"><em class="asterisk">*</em> Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="field-checkBox">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="subscribe-newsletter"
+              name="subscribe-newsletter"
+              checked
+            />
+            <label class="checkbox" for="subscribe-newsletter"
+              >Subscribe Newsletter</label
+            >
+          </div>
+          <div class="field-dropbox">
+            <label class="register-dropbox" for="register-dropbox"
+              >Select a membership</label
+            >
+            <select name="register-dropbox" id="register-dropbox">
+              <option value="">3 Months Subscription</option>
+              <option value="">6 Months Subscription</option>
+              <option value="">12 Months Subscription</option>
+            </select>
+          </div>
+          <div class="field-submit">
+            <button class="submit-button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-menu-wrapper">
+        <div class="footer-menu-item-container">
+          <h4>Legal</h4>
+          <ul class="footer-menu-list">
+            <li><a href="./term_of_use.html">Term of Use</a></li>
+            <li><a href="./privacy_policy.html">Privacy Policy</a></li>
+            <li>
+              <a href="./no_sell_personal_info.html"
+                >Do Not Sell or Share My Personal Infomation</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-menu-item-container">
+          <h4>Our Sites</h4>
+          <ul class="footer-menu-list">
+            <li><a href="./index.html">LionPlanet Home</a></li>
+            <li><a href="./book_a_trip.html">Book a Trip</a></li>
+            <li><a href="./attend_event.html">Attend a Live Event</a></li>
+            <li><a href="./shopping.html">Buy Souvenirs</a></li>
+            <li><a href="./education.html">Inspire Your Kids</a></li>
+            <li><a href="./impact.html">Learn Our Impact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-menu-item-container">
+          <h4>Join Us</h4>
+          <ul class="footer-menu-list">
+            <li><a href="./subscribe.html">Subscribe</a></li>
+            <li>
+              <a href="./sign_up_newsletter.html">Sign Up for Our Newsletter</a>
+            </li>
+            <li>
+              <a href="./manage_newsletter.html">Manage Your Subscription</a>
+            </li>
+            <li><a href="./career.html">Work at LionPlanet</a></li>
+            <li><a href="./donate.html">Donate on Patreon</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-menu-item-container">
+          <h4>Follow Us</h4>
+          <div class="footer-menu-icon-container">
+            <a class="footer-menu-icon" href="www.facebook.com">
+              <i class="gg-facebook"></i>
+            </a>
+
+            <a class="footer-menu-icon" href="www.twitter.com">
+              <i class="gg-twitter"></i>
+            </a>
+
+            <a class="footer-menu-icon" href="www.instagram.com">
+              <i class="gg-instagram"></i>
+            </a>
+
+            <a class="footer-menu-icon" href="www.youtube.com">
+              <i class="gg-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <h6>Copyright &copy 2020-2023 LionPlanet Society</h6>
+    </footer>
+  </body>
+</html>

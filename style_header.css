@@ -1,0 +1,210 @@
+:root {
+    --header-background-color: #191919;
+    --footer-background-color: #191919;
+    --dropDownMenu-background-color: #191919;
+
+    --header-font-color: white;
+    --footer-font-color: white;
+    --dropDownMenu-font-color: white;
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-areas: "left center right";
+    grid-template-columns: 1fr 2fr 1fr;
+
+    background-color: var(--header-background-color);
+    color: var(--header-font-color);
+
+    position: fixed;
+    
+    width: 100%;
+    
+    z-index: 5;
+}
+
+.header-title-container {
+    grid-area: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.header-logo:hover {
+    transform: scale(1.1);
+}
+
+.header-logo-link:focus {
+    transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+   .header-logo {
+       transition-duration: 0.3s;
+   }
+}
+
+.header-title {
+    margin: 0.8rem;
+}
+
+.header-menu, .header-menu * {
+    display: none;
+} 
+
+.header-logo, .header-menu, .nav-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* "below CSS adapted from https://css.gg under the MIT License" */
+.gg-menu-boxed {
+    background-color: var(--dropDownMenu-background-color);
+    color: var(--dropDownMenu-font-color);
+
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 2px solid;
+}
+.gg-menu-boxed::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 3px;
+    top:2px;
+    left: 2px;
+    box-shadow: 0 4px 0, 0 8px 0
+}
+
+.nav-menu-container {
+    grid-area: left;
+}
+
+.nav-menu {
+    font-size: 1.2rem;
+}
+
+.menu-main {
+    font-family: inherit;
+    font-size: inherit;
+
+    background-color: transparent;
+    
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: var(--dropDownMenu-color);
+
+    line-height: 1.5rem;
+
+    list-style: none;
+    
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.menu-item {
+    font-size: 1rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    
+    rotate: x 90deg;
+    transform-origin: top;
+    
+    overflow: hidden;
+
+    background-color: var(--dropDownMenu-background-color);
+}
+
+.menu-link {
+    color: var(--dropDownMenu-font-color);
+
+    text-decoration: none;
+}
+
+.nav-menu:hover .dropdown-menu,
+.nav-menu:focus-within .dropdown-menu {
+    rotate: x 0deg;
+}
+
+.menu-item:hover .menu-link, 
+.menu-item:focus-within .menu-link {
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .dropdown-menu {
+        transition-duration: 0.3s;
+    }
+}
+
+@media (min-width: 50rem) {
+
+    .header-wrapper {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .header-logo {
+        grid-column: 2 / 4;
+    }
+    
+    .header-menu {
+        grid-column: 4 / 11;
+        
+        display: flex;
+
+        justify-content: space-between;
+
+        padding: 0;
+    }
+
+    .header-menu * {
+        display: block;
+
+        font-size: 1.5rem;
+
+        text-decoration: none;
+
+        cursor: pointer;
+
+        background-color: var(--dropDownMenu-background-color);
+        color: var(--dropDownMenu-font-color);
+    }
+
+    .header-menu *:hover {
+        text-decoration: underline;
+    }
+
+    .nav-menu-container {
+        box-sizing: content-box;
+
+        grid-column: 11 / 12;
+
+        margin-left: 4rem;
+    }
+}

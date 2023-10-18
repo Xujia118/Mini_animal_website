@@ -1,0 +1,246 @@
+:root {
+    --header-background-color: #191919;
+    --footer-background-color: #191919;
+    --dropDownMenu-background-color: #191919;
+
+    --header-font-color: white;
+    --footer-font-color: white;
+    --dropDownMenu-font-color: white;
+}
+
+footer {
+    background-color: var(--footer-background-color);
+    color: var(--footer-font-color);
+
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+.footer-menu-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+
+    line-height: 1.6rem;
+}
+
+.footer-menu-list {
+    list-style: none;
+    
+    padding: 0
+}
+
+.footer-menu-list a {
+    text-decoration: none;
+    font-size: 0.8rem;
+
+    color: var(--footer-font-color);
+}
+
+.footer-menu-list a:hover {
+    text-decoration: underline;
+}
+
+.footer-menu-icon-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.footer-menu-icon {
+    grid-column: span 1;
+
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.footer-menu-icon {
+    border: 1 solid white;
+    border-radius: 50%;
+
+    color: black;
+    background-color: white;
+}
+
+.footer-menu-icon:hover {
+    background-color: rgb(154, 154, 154); 
+    transform: scale(1.10);
+  }
+
+  .footer-menu-icon:active {
+    background-color: white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .footer-menu-icon {
+        transition-duration: 0.3s;  
+    }
+}
+
+/* "below CSS adapted from https://css.gg under the MIT License" */
+/* Facebook */
+.gg-facebook {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 20px
+   }
+   
+   .gg-facebook::after,
+   .gg-facebook::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box
+   }
+   
+   .gg-facebook::before {
+    width: 8px;
+    height: 20px;
+    border-left: 4px solid;
+    border-top: 4px solid;
+    border-top-left-radius: 5px;
+    left: 6px
+   }
+   
+   .gg-facebook::after {
+    width: 10px;
+    height: 4px;
+    background: currentColor;
+    top: 7px;
+    left: 4px;
+    transform: skew(-5deg)
+   } 
+
+   /* Twitter */
+   .gg-twitter {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 20px
+   }
+   
+   .gg-twitter::after,
+   .gg-twitter::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    left: 4px
+   }
+   
+   .gg-twitter::before {
+    width: 9px;
+    height: 14px;
+    border-left: 4px solid;
+    border-bottom: 4px solid;
+    border-bottom-left-radius: 6px;
+    background:
+    linear-gradient(
+    to left,currentColor 12px,transparent 0)
+    no-repeat center 2px/10px 4px;
+    top: 4px
+   }
+   
+   .gg-twitter::after {
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    border-radius: 20px;
+    top: 2px;
+    box-shadow: 7px 4px 0,7px 12px 0
+   } 
+
+
+   .gg-youtube {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 10px;
+    box-shadow: 0 0 0 2px;
+    border-radius:
+    15px 15px 15px 15px /
+    45px 45px 45px 45px
+   }
+   
+   /* YouTube */
+   .gg-youtube::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    border-left: 4px solid currentColor;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent
+   } 
+
+   /* Instagram */
+   .gg-instagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px
+   }
+   
+   .gg-instagram::after,
+   .gg-instagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+   }
+   
+   .gg-instagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px
+   }
+   
+   .gg-instagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px
+   } 
+
+h6 {
+    margin: 0;
+    padding-top: 5rem;
+}
+
+@media (min-width: 50rem) {
+    .footer-menu-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 70rem) {
+    .footer-menu-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
